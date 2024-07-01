@@ -44,7 +44,12 @@ const CardId = () => {
             <h2 className="text-xl font-bold p-2">{datas.title}</h2>
             <h3 className="text-lg font-bold p-2">$ {datas.price}</h3>
             <p className="p-2">{datas.description}</p>
-            <button className="border m-2 p-2 rounded hover:bg-emerald-300" type="button">Add To Cart</button>
+            <button
+              className="border m-2 p-2 rounded hover:bg-emerald-300"
+              type="button"
+            >
+              Add To Cart
+            </button>
           </div>
         </div>
       </section>
