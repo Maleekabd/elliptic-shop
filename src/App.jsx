@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SignUp from "./components/register/signup.jsx";
 import Footer from "./components/footer/footer.jsx";
 import SignIn from "./components/SignIn/SignIn.jsx";
+import CardId from "./components/card/cardId.jsx";
 
 const App = () => {
   return (
@@ -32,6 +33,16 @@ const App = () => {
           element={
             <>
               <SignIn />
+            </>
+          }
+        />
+        <Route
+          path="/products/:id"
+          element={
+            <>
+              <Navbar />
+              <CardId />
+              <Footer />
             </>
           }
         />

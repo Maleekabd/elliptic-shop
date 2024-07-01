@@ -9,7 +9,6 @@ const Category = ({ data }) => {
     };
   });
 
-  console.log(categorizedItems);
   return (
     <section className="py-5 h-auto">
       <header>
@@ -18,7 +17,7 @@ const Category = ({ data }) => {
       <div className="h-[36rem] grid p-4 grid-cols-2 grid-rows-2 gap-5 w-full aspect-square">
         {categorizedItems.map((newItem) => (
           <>
-            <div className="h-auto">
+            <div key={newItem.id} className="h-auto">
               <a href="" className="group relative">
                 <h2 className="absolute bottom-2 right-9 text-xl bg-emerald-200 p-2 rounded tracking-tighter">
                   {newItem.category}

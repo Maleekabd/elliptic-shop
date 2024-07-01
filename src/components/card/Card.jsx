@@ -2,11 +2,13 @@ import { useEffect, useState } from "react";
 import "./Card.css";
 import axios from "axios";
 import Category from "../category/Category";
+import slugify from "slugify";
 
 const Card = () => {
   const [loading, setLoading] = useState(false);
-  const [datas, setDatas] = useState(null);
+  const [datas, setDatas] = useState([]);
   const [noData, setNoData] = useState(false);
+
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
@@ -29,6 +31,13 @@ const Card = () => {
     fetchData();
   }, []);
 
+  // const newData = datas?.map((item) => item.title);
+  // const slugCat = slugify(newData, {
+  //   remove: "%",
+  //   replacement: "-",
+  //   lower: true,
+  // });
+
   if (!datas) {
     return (
       <>
@@ -50,7 +59,7 @@ const Card = () => {
               <>
                 <a
                   key={item.id}
-                  href="#"
+                  href={`/products/category?=${item.category}=${item.id}`}
                   className="group relative block overflow-hidden"
                 >
                   <button className="absolute end-4 top-4 z-10 rounded-full bg-white p-1.5 text-gray-900 transition hover:text-gray-900/75">
