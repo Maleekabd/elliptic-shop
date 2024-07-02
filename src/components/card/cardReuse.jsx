@@ -1,4 +1,3 @@
-
 // eslint-disable-next-line react/prop-types
 const CardReuse = ({ id, image, judl, price }) => {
   // const Title = slugify(judl, {

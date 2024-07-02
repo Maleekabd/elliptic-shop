@@ -3,5 +3,11 @@
 @tailwind utilities;
 
 * {
-    font-family: 'syne','Poppins', Courier, monospace;
+  font-family: "syne", "Poppins", Courier, monospace;
+}
+
+@media (max-width: 420px) {
+  * {
+    font-size: 9px;
+  }
 }

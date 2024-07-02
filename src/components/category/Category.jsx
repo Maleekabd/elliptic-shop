@@ -13,11 +13,11 @@ const Category = ({ data }) => {
   });
 
   return (
-    <section className="py-5 h-auto">
+    <section className=" py-5 h-auto">
       <header>
-        <h2 className="mx-auto p-4 pb-2 text-3xl font-bold">Category</h2>
+        <h2 className=" mx-auto p-4 pb-2 text-3xl font-bold">Category</h2>
       </header>
-      <div className="h-[36rem] grid p-4 grid-cols-2 grid-rows-2 gap-5 w-full aspect-square">
+      <div className="w-full grid min-[320px]:grid-cols-2 h-[36rem] p-4 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 lg:grid-rows-2 gap-5">
         {categorizedItems.map((newItem) => (
           <>
             <div key={newItem.id} className="h-auto">
@@ -28,7 +28,7 @@ const Category = ({ data }) => {
                 <img
                   src={newItem.items[0].image}
                   alt=""
-                  className="container rounded h-full w-full object-cover hover:transition hover:duration-300 hover:scale-105"
+                  className="min-[320px]:w-full min-[320px]:h-64 sm:w-full sm:h-64 md:w-full md:h-64 container rounded lg:h-full lg:w-full object-cover hover:transition hover:duration-300 hover:scale-105"
                 />
               </a>
             </div>
