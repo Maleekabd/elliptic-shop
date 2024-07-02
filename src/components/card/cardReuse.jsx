@@ -40,7 +40,7 @@ const CardReuse = ({ id, image, judl, price }) => {
 
         <p className="mt-1.5 text-sm text-gray-700">$ {price}</p>
 
-        <form className="max-[420px]:hidden mt-4">
+        <form className="max-[420px]:hidden md:visible lg:visible mt-4">
           <button className="absolute bottom-0 left-0 block w-full rounded bg-yellow-400 p-4 text-sm font-medium transition hover:scale-105">
             Add to Cart
           </button>
