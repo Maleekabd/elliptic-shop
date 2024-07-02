@@ -30,7 +30,7 @@ const Card = () => {
               Product Collection
             </h2>
           </header>
-          <div className="grid min-[320px]:max-w-screen-sm min-[320px]:grid-cols-3 sm:grid-cols-4 sm:max-w-screen-sm md:grid-cols-5 md:max-w-screen-md lg:max-w-full lg:grid-cols-6 m-1 gap-2">
+          <div className="grid min-[320px]:max-w-screen-sm min-[320px]:grid-cols-2 sm:grid-cols-4 sm:max-w-screen-sm md:grid-cols-5 md:max-w-screen-md lg:max-w-full lg:grid-cols-6 m-1 gap-2">
             {datas.data.map((item) => (
               <>
                 <CardReuse
