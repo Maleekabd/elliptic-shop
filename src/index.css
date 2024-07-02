@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 * {
-  font-family: "syne", "Poppins", Courier, monospace;
+  font-family: "syne", "Poppins", Courier, monospace, "Gill Sans",
+    "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 @media (max-width: 420px) {
