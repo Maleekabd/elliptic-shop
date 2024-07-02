@@ -1,20 +1,19 @@
-import React from "react";
-import slugify from "slugify";
 
-const CardReuse = ({ id, category, image, judl, price }) => {
-  const Title = slugify(judl, {
-    replacement: "-",
-    strict: true,
-    remove: /[%*+~.()'"!:@%]/g,
-    lower: true,
-  });
+// eslint-disable-next-line react/prop-types
+const CardReuse = ({ id, image, judl, price }) => {
+  // const Title = slugify(judl, {
+  //   replacement: "-",
+  //   strict: true,
+  //   remove: /[%*+~.()'"!:@%]/g,
+  //   lower: true,
+  // });
 
-  const Category = slugify(category, {
-    replacement: "-",
-    strict: true,
-    remove: /[%*+~.()'"!:@%]/g,
-    lower: true,
-  });
+  // const Category = slugify(category, {
+  //   replacement: "-",
+  //   strict: true,
+  //   remove: /[%*+~.()'"!:@%]/g,
+  //   lower: true,
+  // });
   return (
     <a
       key={id}
