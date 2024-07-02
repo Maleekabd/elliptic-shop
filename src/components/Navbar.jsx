@@ -5,6 +5,7 @@ import { IoCartOutline } from "react-icons/io5";
 import "./navbar.css";
 
 const Navbar = () => {
+
   return (
     <header className="card p-4 dark:bg-gray-100 dark:text-gray-800 ">
       {/* navbar */}
@@ -82,8 +83,12 @@ const Navbar = () => {
       <section>
         <div className="">
           <ul className="container-child-navbar">
-            <li>Man&apos;s Clothing</li>
-            <li>Jewelery</li>
+            <li>
+              <a href="">Man&apos;s Clothing</a>
+            </li>
+            <li className="">
+              <a href={`/products/category/`}>Jewelery</a>
+            </li>
             <li>Women&apos;s Clothing</li>
             <li>Electronics</li>
           </ul>

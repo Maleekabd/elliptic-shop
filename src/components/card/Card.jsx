@@ -1,38 +1,20 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import "./Card.css";
-import axios from "axios";
 import Category from "../category/Category";
-import slugify from "slugify";
 import CardReuse from "./cardReuse";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchData } from "../../redux/FetchDataStore/fetchDataReducer";
 
 const Card = () => {
-  const [loading, setLoading] = useState(false);
-  const [datas, setDatas] = useState([]);
-  const [noData, setNoData] = useState(false);
+  const dispatch = useDispatch();
+  const datas = useSelector((state) => state.data);
+  console.log(datas.data);
 
   useEffect(() => {
-    const fetchData = async () => {
-      setLoading(true);
-      const { data } = await axios.get("https://fakestoreapi.com/products/");
-      try {
-        if (!data || data.length === 0) {
-          setLoading(false);
-          setNoData(true);
-        } else {
-          setLoading(false);
-          setDatas(data);
-          setNoData(false);
-        }
-      } catch (error) {
-        console.log(error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchData();
-  }, []);
+    dispatch(fetchData());
+  }, [dispatch]);
 
-  if (!datas) {
+  if (datas.loading) {
     return (
       <>
         <h2>loading</h2>
@@ -41,7 +23,7 @@ const Card = () => {
   } else {
     return (
       <>
-        <Category data={datas} />
+        <Category data={datas.data} />
         <section>
           <header>
             <h2 className="m-1 text-xl font-bold text-gray-900 sm:text-3xl">
@@ -49,9 +31,15 @@ const Card = () => {
             </h2>
           </header>
           <div className="grid min-[320px]:max-w-screen-sm min-[320px]:grid-cols-3 sm:grid-cols-4 sm:max-w-screen-sm md:grid-cols-5 md:max-w-screen-md lg:max-w-full lg:grid-cols-6 m-1 gap-2">
-            {datas?.map((item) => (
+            {datas.data.map((item) => (
               <>
-                <CardReuse image={item.image} judl={item.title} price={item.price} id={item.id} category={item.category} />
+                <CardReuse
+                  image={item.image}
+                  judl={item.title}
+                  price={item.price}
+                  id={item.id}
+                  category={item.category}
+                />
               </>
             ))}
           </div>

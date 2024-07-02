@@ -1,10 +1,13 @@
 import "./Category.css";
 
+// eslint-disable-next-line react/prop-types
 const Category = ({ data }) => {
+  // eslint-disable-next-line react/prop-types
   const uniqueCategories = [...new Set(data?.map((item) => item.category))];
   const categorizedItems = uniqueCategories.map((category) => {
     return {
       category,
+      // eslint-disable-next-line react/prop-types
       items: data.filter((item) => item.category === category),
     };
   });
@@ -31,21 +34,6 @@ const Category = ({ data }) => {
             </div>
           </>
         ))}
-
-        {/* <img src="https://images.unsplash.com/photo-1550344071-13ecada2a91d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt=""
-                className="rounded w-full h-full min-h-28 aspect-square"
-              />
-              <img
-                src="https://jooinn.com/images/gold-jewelry.jpg"
-                alt=""
-                className="rounded w-full h-full min-h-28 aspect-square"
-              />
-              <img
-                src="https://wallpaperaccess.com/full/742156.jpg"
-                alt=""
-                className="rounded w-full h-full min-h-28 aspect-square"
-              /> */}
       </div>
     </section>
   );
