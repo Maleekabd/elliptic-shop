@@ -1,25 +1,12 @@
 // eslint-disable-next-line react/prop-types
 const CardReuse = ({ id, image, judl, price }) => {
-  // const Title = slugify(judl, {
-  //   replacement: "-",
-  //   strict: true,
-  //   remove: /[%*+~.()'"!:@%]/g,
-  //   lower: true,
-  // });
-
-  // const Category = slugify(category, {
-  //   replacement: "-",
-  //   strict: true,
-  //   remove: /[%*+~.()'"!:@%]/g,
-  //   lower: true,
-  // });
   return (
     <a
       key={id}
       href={`/products/${id}`}
       className="group relative block overflow-hidden"
     >
-      <button className="absolute end-4 top-4 z-10 rounded-full bg-white p-1.5 text-gray-900 transition hover:text-gray-900/75">
+      <button className="max-[420px]:hidden absolute end-4 top-4 z-10 rounded-full bg-white p-1.5 text-gray-900 transition hover:text-gray-900/75">
         <span className="sr-only">Wishlist</span>
 
         <svg
@@ -41,17 +28,19 @@ const CardReuse = ({ id, image, judl, price }) => {
       <img
         src={image}
         alt=""
-        className="h-56 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-72"
+        className="max-[420px]:h-32 h-56 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-72"
       />
 
-      <div className="relative h-52 border text-sm border-gray-100 bg-white p-2">
+      <div className="max-[420px]:h-24 relative h-52 border text-sm border-gray-100 bg-white p-2">
         {/* <p>{datas.description}</p> */}
 
-        <h3 className="mt-4 text-sm font-medium text-gray-900">{judl}</h3>
+        <h3 className="line-clamp-1 md:line-clamp-none lg:line-clamp-none mt-4 text-sm font-medium text-gray-900">
+          {judl}
+        </h3>
 
         <p className="mt-1.5 text-sm text-gray-700">$ {price}</p>
 
-        <form className="mt-4">
+        <form className="max-[420px]:hidden mt-4">
           <button className="absolute bottom-0 left-0 block w-full rounded bg-yellow-400 p-4 text-sm font-medium transition hover:scale-105">
             Add to Cart
           </button>
