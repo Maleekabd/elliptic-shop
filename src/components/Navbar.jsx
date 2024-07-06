@@ -5,7 +5,6 @@ import { IoCartOutline } from "react-icons/io5";
 import "./navbar.css";
 
 const Navbar = () => {
-
   return (
     <header className="card p-4 dark:bg-gray-100 dark:text-gray-800 ">
       {/* navbar */}
@@ -15,7 +14,7 @@ const Navbar = () => {
             <a
               rel="noopener noreferrer"
               href="#"
-              className="flex items-center px-4 -mb-1 border-b-2 dark:border- dark:text-violet-600 dark:border-violet-600"
+              className="flex items-center px-4 -mb-1 dark:text-violet-600 dark:border-violet-600"
             >
               <BsPersonCircle />
             </a>
@@ -24,7 +23,7 @@ const Navbar = () => {
             <a
               rel="noopener noreferrer"
               href="#"
-              className="flex items-center px-4 -mb-1 border-b-2 dark:border-"
+              className="flex items-center px-4 -mb-1"
             >
               <MdFavoriteBorder />
             </a>
@@ -33,7 +32,7 @@ const Navbar = () => {
             <a
               rel="noopener noreferrer"
               href="#"
-              className="flex items-center px-4 -mb-1 border-b-2 dark:border-"
+              className="flex items-center px-4 -mb-1"
             >
               <IoCartOutline />
             </a>

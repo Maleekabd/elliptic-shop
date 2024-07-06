@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  font-family: "syne", "Poppins", Courier, Calibri;
+body {
+  font-family: "syne", "Poppins", Courier;
 }
 
 @media (max-width: 420px) {
