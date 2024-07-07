@@ -26,6 +26,7 @@ const Category = ({ data }) => {
                   {newItem.category}
                 </h2>
                 <img
+                loading="lazy"
                   src={newItem.items[0].image}
                   alt=""
                   className="min-[320px]:w-full min-[320px]:h-64 sm:w-full sm:h-64 md:w-full md:h-64 container rounded lg:h-full lg:w-full object-cover hover:transition hover:duration-300 hover:scale-105"
