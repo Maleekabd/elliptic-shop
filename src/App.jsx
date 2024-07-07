@@ -6,6 +6,7 @@ import Footer from "./components/footer/footer.jsx";
 import SignIn from "./components/SignIn/SignIn.jsx";
 import CardId from "./components/card/cardId.jsx";
 import Category from "./components/category/Category.jsx";
+import Carousel from "./components/carousel/Carousel.jsx";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
           element={
             <>
               <Navbar />
+              <Carousel />
               <Card />
               <Footer />
             </>

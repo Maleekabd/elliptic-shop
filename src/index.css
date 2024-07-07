@@ -3,11 +3,13 @@
 @tailwind utilities;
 
 body {
-font-family: 'Syne','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Syne", "Franklin Gothic Medium", "Arial Narrow", Arial,
+    sans-serif;
 }
 
-@media (min-width: 320px) {
-  * {
-    font-size: 11px;
+@media (min-width: 1024px) {
+  body {
+    font-size: 18px;
   }
 }
+

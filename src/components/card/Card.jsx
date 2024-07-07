@@ -8,7 +8,6 @@ import { fetchData } from "../../redux/FetchDataStore/fetchDataReducer";
 const Card = () => {
   const dispatch = useDispatch();
   const datas = useSelector((state) => state.data);
-  console.log(datas.data);
 
   useEffect(() => {
     dispatch(fetchData());
