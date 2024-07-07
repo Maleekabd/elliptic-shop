@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 body {
-  font-family: "syne", "Poppins", Courier;
+font-family: 'Syne','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-@media (max-width: 420px) {
+@media (min-width: 320px) {
   * {
-    font-size: 9px;
+    font-size: 8px;
   }
 }

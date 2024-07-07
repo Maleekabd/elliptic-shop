@@ -1,8 +1,8 @@
-@media (min-width : 420px) {
-    .small-screen {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0,1fr));
-        width: 100%;
-        margin: 1px;
-    }
+@media (min-width: 320px) {
+  .small-screen {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: 100%;
+    margin: 1px;
+  }
 }
